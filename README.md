@@ -1,4 +1,7 @@
-# BeesAIve
-Proyecto de Saturdays.AI que busca prevenir la muerte de las abejas
+# BeesAIve web app
 
-Aplicación web que 
+
+
+Inspired by Saturdays.ai
+
+
