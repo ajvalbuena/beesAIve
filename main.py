@@ -61,10 +61,10 @@ def prediction(filename):
 
     processed_images= cam(file_path, model, LAYER)
 
-    Image.fromarray(processed_images[0]).save(os.path.join('uploads', 'original_image.png'))
-    Image.fromarray(processed_images[1]).save(os.path.join('uploads', 'heatmap_image.png'))
-    Image.fromarray(processed_images[2]).save(os.path.join('uploads', 'superimposed_image.png'))
-    Image.fromarray(processed_images[3]).save(os.path.join('uploads', 'rectangle_image.png'))
+    Image.fromarray(processed_images[0]).save(os.path.join('static/grad_cam', 'original_image.png'))
+    Image.fromarray(processed_images[1]).save(os.path.join('static/grad_cam', 'heatmap_image.png'))
+    Image.fromarray(processed_images[2]).save(os.path.join('static/grad_cam', 'superimposed_image.png'))
+    Image.fromarray(processed_images[3]).save(os.path.join('static/grad_cam', 'rectangle_image.png'))
 
     return render_template('predict.html', predictions=predictions)
 
