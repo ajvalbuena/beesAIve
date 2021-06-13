@@ -41,28 +41,28 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 <!-- First Photo Grid-->
   <div class="w3-row-padding">
-    <div class="w3-third w3-container w3-margin-bottom">
+    <div class="w3-quarter w3-container w3-margin-bottom w3-center">
       <img class="w3-hover-opacity" src="{{url_for('static', filename='grad_cam/original_image.png')}}" style="width:80%" >
       <div class="w3-container w3-white">
         <p><b>Original image</b></p>
       </div>
     </div>
-    <div class="w3-third w3-container w3-margin-bottom">
+    <div class="w3-quarter w3-container w3-margin-bottom w3-center">
       <img class="w3-hover-opacity" src="{{url_for('static', filename='grad_cam/heatmap_image.png')}}" style="width:80%" >
       <div class="w3-container w3-white">
-        <p><b>Heatmap image</b></p>
+        <p><b>Heatmap</b></p>
       </div>
     </div>
-    <div class="w3-third w3-container w3-margin-bottom">
+    <div class="w3-quarter w3-container w3-margin-bottom w3-center">
       <img class="w3-hover-opacity" src="{{url_for('static', filename='grad_cam/superimposed_image.png')}}" style="width:80%" >
       <div class="w3-container w3-white">
-        <p><b>Superimposed image</b></p>
+        <p><b>Superimposed </b></p>
       </div>
     </div>
-    <div class="w3-third w3-container w3-margin-bottom">
+    <div class="w3-quarter w3-container w3-margin-bottom w3-center">
       <img class="w3-hover-opacity" src="{{url_for('static', filename='grad_cam/rectangle_image.png')}}" style="width:80%" >
       <div class="w3-container w3-white">
-        <p><b>Rectangle image</b></p>
+        <p><b>Object detected</b></p>
       </div>
     </div>
   </div>
@@ -95,7 +95,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <br>
   </div>
 
-  <div class="w3-content w3-justify w3-text-grey w3-padding-32">
+  <div class="w3-content w3-text-grey w3-padding-48 w3-center">
         <a href="{{ url_for('main_page') }}">
         <button class="w3-button w3-black w3-padding-large">
           <i class="fa fa-undo"></i> TRY AGAIN?

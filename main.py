@@ -24,9 +24,8 @@ TARGET_CANALS_SIZE = (299, 299, 3)
 
 @app.route("/", methods=['GET', 'POST'])
 def main_page():
-    dir = 'uploads'
-    for f in os.listdir(dir):
-        os.remove(os.path.join(dir, f))
+    remove_files('uploads')
+    remove_files('static/grad_cam')
 
     if request.method == 'POST':
         file = request.files['file']
@@ -72,6 +71,9 @@ def prediction(filename):
 def convert_probabilities(prob):
     return round(prob * 100, 2)
 
+def remove_files(dir):
+    for f in os.listdir(dir):
+        os.remove(os.path.join(dir, f))
 
 def cam(img_path, model, layer):
     # Importamos la imagen original
@@ -115,8 +117,6 @@ def cam(img_path, model, layer):
                               color=(255, 0, 0),
                               thickness=2)
 
-    # Creamos la visualización
-    titles = ['Original image', 'Heatmap', 'Superimposed image', 'Rectangle image']
     image_type = [img_c, jet_heatmap, superimposed_img, rectangle]
 
     return image_type
