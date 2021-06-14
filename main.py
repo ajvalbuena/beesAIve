@@ -45,7 +45,7 @@ def prediction(filename):
     probabilities = model.predict(np.array([my_image_re, ]))[0, :]
     probs_rounded = list(map(convert_probabilities, probabilities))
 
-    number_to_class = ['bee', 'wasp', 'other insect', 'other thing']
+    number_to_class = ['bee', 'wasp', 'other thing', 'other insect']
     index = np.argsort(probs_rounded)
     predictions = {
         "class1": number_to_class[index[3]],
