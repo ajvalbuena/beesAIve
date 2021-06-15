@@ -15,6 +15,7 @@ import tensorflow as tf
 
 app = Flask(__name__)
 
+## MODEL'S PATH (change it to your specific model)
 model = load_model('models/bs_xception_model.h5')
 
 LAYER = 'block14_sepconv2_act'
